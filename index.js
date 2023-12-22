@@ -92,3 +92,10 @@ var totalNet = 0;
 var averageChange = 0;
 var greatestIncrease = 0;
 var greatestDecrease = 0;
+
+console.log(totalMonths);
+
+for (let i = 0; i < totalMonths; i++) {
+  totalNet += finances[i][1];
+}
+console.log(totalNet);
