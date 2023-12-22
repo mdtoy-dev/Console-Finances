@@ -112,12 +112,20 @@ for (let i= 1; i < totalMonths; i++) {
 
   if (change > greatestIncrease) {
     greatestIncrease = change;
+    greatestIncreaseIndex = i;
   }
 
   if (change < greatestDecrease) {
     greatestDecrease = change;
+    greatestDecreaseIndex = i;
   }
 }
 
 console.log(greatestIncrease);
 console.log(greatestDecrease);
+
+const greatestIncreaseDate = finances[greatestIncreaseIndex][0];
+const greatestDecreaseDate = finances[greatestDecreaseIndex][0];
+
+console.log(greatestIncreaseDate);
+console.log(greatestDecreaseDate);
