@@ -127,6 +127,6 @@ console.log('Financial Analysis');
 console.log('----------------------------');
 console.log(`Total Months: ${totalMonths}`);
 console.log(`Total Net: $${totalNet}`);
-console.log(`Average Change: $${averageChange}`);
+console.log(`Average Change: $${averageChange.toFixed(2)}`);
 console.log(`Greatest Increase in Profits/Losses: ${greatestIncreaseDate} ($${greatestIncrease})`);
 console.log(`Greatest Decrease in Profits/Losses: ${greatestDecreaseDate} ($${greatestDecrease})`);
