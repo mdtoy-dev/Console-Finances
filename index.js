@@ -87,26 +87,25 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+//HOW MANY MONTHS?
 const totalMonths = finances.length;
 var totalNet = 0;
 var averageChange = 0;
 var greatestIncrease = 0;
 var greatestDecrease = 0;
 
-console.log(totalMonths);
-
+// WHAT IS TOTAL NET
 for (let i = 0; i < totalMonths; i++) {
   totalNet += finances[i][1];
 }
-console.log(totalNet);
 
+// WHAT IS AVERAGE CHANGE
 for (let i = 1; i < totalMonths; i++) {
   averageChange += finances[i][1] - finances[i - 1][1];
 }
 averageChange /= (totalMonths - 1);
 
-console.log(averageChange);
-
+// WHAT AND WHEN THE GREATEST CHANGES
 for (let i= 1; i < totalMonths; i++) {
   const change = finances[i][1] - finances[i - 1][1];
 
@@ -121,11 +120,13 @@ for (let i= 1; i < totalMonths; i++) {
   }
 }
 
-console.log(greatestIncrease);
-console.log(greatestDecrease);
-
 const greatestIncreaseDate = finances[greatestIncreaseIndex][0];
 const greatestDecreaseDate = finances[greatestDecreaseIndex][0];
 
-console.log(greatestIncreaseDate);
-console.log(greatestDecreaseDate);
+console.log('Financial Analysis');
+console.log('----------------------------');
+console.log(`Total Months: ${totalMonths}`);
+console.log(`Total Net: $${totalNet}`);
+console.log(`Average Change: $${averageChange.toFixed(2)}`);
+console.log(`Greatest Increase in Profits/Losses: ${greatestIncreaseDate} ($${greatestIncrease})`);
+console.log(`Greatest Decrease in Profits/Losses: ${greatestDecreaseDate} ($${greatestDecrease})`);
