@@ -106,3 +106,18 @@ for (let i = 1; i < totalMonths; i++) {
 averageChange /= (totalMonths - 1);
 
 console.log(averageChange);
+
+for (let i= 1; i < totalMonths; i++) {
+  const change = finances[i][1] - finances[i - 1][1];
+
+  if (change > greatestIncrease) {
+    greatestIncrease = change;
+  }
+
+  if (change < greatestDecrease) {
+    greatestDecrease = change;
+  }
+}
+
+console.log(greatestIncrease);
+console.log(greatestDecrease);
