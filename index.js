@@ -99,3 +99,10 @@ for (let i = 0; i < totalMonths; i++) {
   totalNet += finances[i][1];
 }
 console.log(totalNet);
+
+for (let i = 1; i < totalMonths; i++) {
+  averageChange += finances[i][1] - finances[i - 1][1];
+}
+averageChange /= (totalMonths - 1);
+
+console.log(averageChange);
