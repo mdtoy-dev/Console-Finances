@@ -86,3 +86,9 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+const totalMonths = finances.length;
+var totalNet = 0;
+var averageChange = 0;
+var greatestIncrease = 0;
+var greatestDecrease = 0;
